@@ -6,11 +6,11 @@ using namespace std;
 
 const int GRID_OFFSET = 10;
 
-const int GRID_SCALE = 10;
+const int GRID_SCALE = 20;
 
-const int CUBE_SPACE_SIZE = 7;
+const int CUBE_SPACE_SIZE = 9;
 
-const int CUBE_GRID_SIZE = 2 * CUBE_SPACE_SIZE;
+const int CUBE_GRID_SIZE = 2 * CUBE_SPACE_SIZE + 1;
 
 short grid[CUBE_GRID_SIZE][CUBE_GRID_SIZE][CUBE_GRID_SIZE];
 
@@ -18,9 +18,9 @@ const short EMPTY_CELL = 0;
 
 const short SIMPLE_CUBIC = 1;
 
-const short BODY_CENTERED_CUBIC = 2;
+const short FACE_CENTERED_CUBIC = 2;
 
-const short FACE_CENTERED_CUBIC = 3;
+const short BODY_CENTERED_CUBIC = 3;
 
 void clear() {
 	for(int z=0; z<CUBE_GRID_SIZE; z++) {
