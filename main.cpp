@@ -4,9 +4,11 @@
 
 using namespace std;
 
-const int CENTER_OFFSET = 10;
+const int GRID_OFFSET = 10;
 
-const int CUBE_SPACE_SIZE = 21;
+const int GRID_SCALE = 10;
+
+const int CUBE_SPACE_SIZE = 7;
 
 const int CUBE_GRID_SIZE = 2 * CUBE_SPACE_SIZE;
 
@@ -180,12 +182,12 @@ void save(const char *name) {
 					delta = grid[x][y][z];
 				}
 
-	sides[0] = CENTER_OFFSET + 0 - delta;
-	sides[1] = CENTER_OFFSET + 0 + delta;
-	sides[2] = CENTER_OFFSET + 0 - delta;
-	sides[3] = CENTER_OFFSET + 0 + delta;
-	sides[4] = CENTER_OFFSET + 0 - delta;
-	sides[5] = CENTER_OFFSET + 0 + delta;
+	sides[0] = GRID_OFFSET + x * GRID_SCALE - delta;
+	sides[1] = GRID_OFFSET + x * GRID_SCALE + delta;
+	sides[2] = GRID_OFFSET + y * GRID_SCALE - delta;
+	sides[3] = GRID_OFFSET + y * GRID_SCALE + delta;
+	sides[4] = GRID_OFFSET + z * GRID_SCALE - delta;
+	sides[5] = GRID_OFFSET + z * GRID_SCALE + delta;
 
 	/*
 	 * Single cube.
